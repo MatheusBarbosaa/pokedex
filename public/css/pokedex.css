@@ -1,0 +1,68 @@
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --font-size: 16px;
+    --gray-100: #efefef;
+    --gray-900: #25252b;
+
+    --white-900: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-color: var(--gray-100);
+}
+.container {
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: auto;
+}
+/* ---------- Header ---------- */
+.header {
+    background-color: var(--gray-900);
+    text-align: center;
+    height: 8rem;
+}
+.pokemon__logo {
+    width: 300px;
+}
+
+/* ---------- pokestop ---------- */
+.pokestop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    padding: 2rem 0;
+    min-height: calc(100vh - 8rem - 52px);
+}
+
+/* ---------- footer ---------- */
+/* ---------- footer ---------- */
+.footer {
+    background-color: var(--gray-900);
+    color: var(--white-900);
+    text-align: center;
+    padding: 1rem 0;
+    text-transform: uppercase;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/*--------------CADASTRO DE POKÉMON--------------------*/

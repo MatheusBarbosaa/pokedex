@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.9.3",
+    "sequelize": "^6.37.2"
+  },
+  "nome": "Matheus",
+  "idade": 22,
+  "email": "matheus@example.com",
+  "interesses": [
+    "programação",
+    "música",
+    "viagens"
+  ],
+  "ativo": true
+}
