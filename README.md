@@ -1,1 +1,2 @@
 # pokedex
+## Inicializando o projeto
