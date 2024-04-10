@@ -37,7 +37,7 @@ document.getElementById('searchForm').addEventListener('submit', async (event) =
     const response = await fetch(`/buscar/${buscarPokemon}`);
     const pokemon = await response.json();
 
-    if (pokemon) { // Verifica se o pokemon foi encontrado
+    if (pokemon) { // Verifica se o pokemon foi encontrado!!!!
         // Limpar os detalhes dos Pokémon existentes na página inicial
         document.getElementById('pokebola').innerHTML = ''; //onde fica o ID do card
 
@@ -76,5 +76,4 @@ function deletarpokebola(id) {
             window.location.reload();
         });
 }
-
 
