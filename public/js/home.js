@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             const pokebola = document.querySelector('#pokebola');
-
+//este código abaixo mostra todas informações dos cards na pagina home
             if (data.length > 0) {
                 data.forEach(pokebolas => { // Renomeando a variável do loop forEach
                     const card = document.createElement('div');
