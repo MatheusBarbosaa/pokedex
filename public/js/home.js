@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <button class="btn btn-danger" onclick="deletarpokebola(${pokebolas.id})">Deletar</button>
                         <br>
-                        <button class="btn btn-danger" onclick="atualizarpokebola(${pokebolas.id})">Editar</button>
+                        <button class="btn btn-danger" onclick="aualizarPokemon(${pokebolas.id})">Editar</button>
                     </div>
                 `;
                     pokebola.appendChild(card);
@@ -76,7 +76,3 @@ function deletarpokebola(id) {
             window.location.reload();
         });
 }
-
-
-
-
