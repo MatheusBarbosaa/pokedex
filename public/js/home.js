@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             <p class="card-text">Tipo: ${pokebolas.tipo}</p>
                         </div>
                         <button class="btn btn-danger" onclick="deletarpokebola(${pokebolas.id})">Deletar</button>
+                        <br>
+                        <button class="btn btn-danger" onclick="atualizarpokebola(${pokebolas.id})">Editar</button>
                     </div>
                 `;
                     pokebola.appendChild(card);
@@ -64,8 +66,6 @@ document.getElementById('searchForm').addEventListener('submit', async (event) =
     }
 });
 
-
-
 function deletarpokebola(id) {
     fetch(`/pokebola/${id}`, {
         method: 'DELETE'
@@ -76,4 +76,7 @@ function deletarpokebola(id) {
             window.location.reload();
         });
 }
+
+
+
 

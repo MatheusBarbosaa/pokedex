@@ -30,6 +30,7 @@ app.get('/cadastro.html', function (req, res) {
     res.sendFile(__dirname + '/public/cadastro.html')
 });
 
+
 app.post('/cadastro', async (rec, res) => { //enviando dados para o banco de dados
     await Pokebola.create(rec.body)
         .then(() => {
@@ -47,10 +48,23 @@ app.get('/pokebola', async (req, res) => { //mostrar todos os pokemons na pagina
 });
 
 
-app.get("/editarPokemon", async (re, res) => {
+app.put('/pokebola/:id', async (req, res) => {
     const id = req.params.id;
-    res.render('editar', { id: id });
-})
+    const { nome, tipo, nivel, imagem } = req.body;
+    try {
+        const pokebola = await Pokebola.findByPk(id);
+        if (pokebola) {
+            await pokebola.update({ nome, tipo, nivel, imagem });
+            return res.status(200).json({ message: 'Pokémon atualizado com sucesso!' });
+        } else {
+            return res.status(404).json({ error: 'Pokémon não encontrado.' });
+        }
+    } catch (error) {
+        console.error('Erro ao atualizar o Pokémon:', error);
+        return res.status(500).json({ error: 'Erro interno do servidor ao atualizar o Pokémon.' });
+    }
+});
+
 
 
 app.get('/api/pokebola', async (req, res) => { //pagina de detalhes
@@ -108,3 +122,4 @@ Pokebola.sync() // sincronizando o modelo com o banco de dados
 app.listen(8080, function () {
     console.log("Servidor rodando em: http://localhost:8080");
 });
+

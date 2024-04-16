@@ -15,36 +15,48 @@
 <body>
 
   <header class="header">
+
     <div class="container">
       <img src="imagens/pokemon_logo (1).png" class="pokemon__logo" alt="logo pokemon" />
     </div>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary" action="/pokedex.html">
       <div class="container-fluid">
         <a class="navbar-brand" href="cadastro.html" method="get">Cadastrar</a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="pokedex.html">Home</a>
             </li>
           </ul>
+
           <form id="searchForm" class="d-flex" role="search">
-            <input id="searchInput" class="form-control me-2" type="search" placeholder="Procurar pokémon" aria-label="Procurar pokémon">
-              <button class="btn btn-outline-success" type="submit" onclick="pesquisar()">Procurar</button>
+            <input id="searchInput" class="form-control me-2" type="search" placeholder="Procurar pokémon"
+              aria-label="Procurar pokémon">
+            <button class="btn btn-outline-success" type="submit" onclick="pesquisar()">Procurar</button>
           </form>
+
           <div id="pokemonDetails"></div>
+
         </div>
       </div>
     </nav>
   </header>
+
   <div class="container mb-4">
     <div id="pokebola" class="card-group row"></div>
+    </div>
   </div>
+
   </main>
   <br><br><br><br>
+
   <footer class="footer">
     <div class="container">
       <p class="footer__text">
@@ -52,6 +64,7 @@
       </p>
     </div>
   </footer>
+  
   <script src="js/home.js"></script>
 </body>
 

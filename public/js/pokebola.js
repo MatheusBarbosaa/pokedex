@@ -1,8 +1,10 @@
+//ESTE CÓDIGO SERÁ FUNCIONAL APENAS PARA OLHAR DETALHES DE UM POKEMON OU QUALQUER OUTRO TIPO DE CONTEÚDO QUE SEJA SEU CÓDIGO.
+
 document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
 
-    fetch('/api/pokebola?id=' + id)
+    fetch('/api/pokebola?id=' + id) //requisição feita na rota /api que está dentro do arquivo app.js
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro na solicitação. Status: ' + response.status);
